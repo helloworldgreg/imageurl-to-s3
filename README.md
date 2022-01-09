@@ -11,7 +11,7 @@ You simply have to pass as docker arguments:
 `docker run -it [SOURCE-IMAGE-URL] [S3-DESTINATION-BUCKET] [NEW-IMAGE-EXTENSION]`    
   
 Example:  
-`docker run -ti converter https://i.picsum.photos/id/822/536/354.jpg mybucket png`
+`docker run -ti converter https://upload.wikimedia.org/wikipedia/commons/f/ff/Wikipedia_logo_593.jpg mybucket png`
 
 ## Details
 This project is intended to be launched in an AWS environment (ECS, EC2, ...).  
@@ -28,7 +28,7 @@ the instance (available in the metadata service) to upload the image to S3.
 `docker build -t converter .`
 
 ### 2) Test locally
-`docker run -ti converter https://i.picsum.photos/id/822/536/354.jpg mybucket png`
+`docker run -ti converter https://upload.wikimedia.org/wikipedia/commons/f/ff/Wikipedia_logo_593.jpg mybucket png`
 
 You should get the following error
 > upload failed: ./converted.png to s3://mybucket/converted.png Unable to locate credentials
