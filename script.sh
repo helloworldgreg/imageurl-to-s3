@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "List of all the arguments passed to the script: "
+echo "$*"
 
 # Getting the 3 characters of the file extension (e.g: jpg, png, ...)
 fileUrl=$1
